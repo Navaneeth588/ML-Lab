@@ -1,0 +1,17 @@
+import numpy as np
+import matplotlib.pyplot as plt
+np.random.seed(0)
+feature = np.random.normal(loc=5.0, scale=2.0, size=100)  
+mean_val = np.mean(feature)
+variance_val = np.var(feature)
+print("Mean of the feature:", mean_val)
+print("Variance of the feature:", variance_val)
+plt.hist(feature, bins=10, edgecolor='black')
+plt.title("Histogram of Selected Feature")
+plt.xlabel("Feature Value")
+plt.ylabel("Frequency")
+plt.grid(True)
+plt.show()
+hist, bin_edges = np.histogram(feature, bins=10)
+print("Histogram Counts:", hist)
+print("Bin Edges:", bin_edges)
